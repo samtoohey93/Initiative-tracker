@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Homepage</title>
+    <title>Player Info</title>
     <link rel="manifest" href="./manifest.json">
     <link rel='stylesheet' href='./style.css'>
     <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
@@ -22,13 +22,57 @@
 </head>
 <body>
     <nav class="nav nav-pills flex-column flex-sm-row">
-        <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href='index.html' class='selected'>Home</a>
-        <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href='players.html' class='selected'>Players</a>
-        <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href='about.html' class='selected'>About</a>
-      </nav>
-    <main>
-
-        You're viewing about page.
-    </main>
+        <a class="btn btn-sm btn-outline-secondary" aria-current="page" href='index.html' class='selected'>Home</a>
+        <a class="btn btn-sm btn-outline-secondary nav-item active" aria-current="page" href='players.html' class='selected'>Players</a>
+        <a class="btn btn-sm btn-outline-secondary" aria-current="page" href='about.html' class='selected'>About</a>
+        </nav>
+<section class="container">
+   <div class="playerPod">
+  <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+    Launch static backdrop modal
+  </button>
+  
+  <!-- Modal -->
+<section class="container" id="playerBoxes">
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input class="playerName"><label for="playerName">Player Name</label> </br>
+          
+          <datalist id="conditions">
+            <option value="Blinded">
+            <option value="Charmed">
+            <option value="Deafened">
+            <option value="Frightened">
+            <option value="Grappled">
+            <option value="Incapacitated">
+            <option value="Invisible">
+            <option value="Paralyzed">
+            <option value="Petrified">
+            <option value="Poisoned">
+            <option value="Prone">
+            <option value="Restrained">
+            <option value="Stunned">
+            <option value="Unconscious">
+            <option value="Exhaustion">
+          </datalist>
+          <label for="conditions">Player Conditions List:</label>
+         <input list="conditions" name="condition" id="condition">
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Understood</button>
+        </div>
+      </div>
+    </div>
+  </div>
+   </div> 
+</section>
 </body>
 </html>
