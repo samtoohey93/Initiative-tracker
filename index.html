@@ -26,14 +26,20 @@
         <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href='index.html' class='selected'>Home</a>
         <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href='players.html' class='selected'>Players</a>
         <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href='about.html' class='selected'>About</a>
+        <pwa-auth appearance="none" googlekey="640376657696-6nslhet257ubc6f5eaib6l0uts0lu7bh.apps.googleusercontent.com"></pwa-auth>
+        <button id="myBtn">My Own Sign In Button</button>
+        <script>
+        // Hook up our own button to pwa-auth sign-in flow
+        const pwaAuth = document.querySelector("pwa-auth");
+        const myBtn = document.querySelector("#myBtn");
+        myBtn.addEventHandler("click", () => pwaAuth.signIn("Google"));
+        </script>
       </nav>
 
-<section class="login">
-    <!-- To create a key, see https://github.com/pwa-builder/pwa-auth#creating-keys -->
-<pwa-auth
-googlekey="640376657696-6nslhet257ubc6f5eaib6l0uts0lu7bh.apps.googleusercontent.com">
-</pwa-auth>
-</section>
+
+
+
+
 </body>
 <script type="module" src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwaauth/dist/pwa-auth.js"></script>
 <script src="js/scripts.js"></script>
