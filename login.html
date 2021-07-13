@@ -14,6 +14,9 @@
             navigator.serviceWorker.register('./service-worker.js');
         };
     </script>
+    <script
+    type="module"
+    src="https://cdn.jsdelivr.net/npm/@pwabuilder/pwaauth@latest/dist/pwa-auth.min.js"></script>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="PWA Example">
@@ -23,10 +26,9 @@
 </head>
 <body>
     <nav class="nav nav-pills flex-column flex-sm-row">
-        <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href='index.html' class='selected'>Home</a>
-        <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href='players.html' class='selected'>Players</a>
-        <a class="flex-sm-fill text-sm-center nav-link active" aria-current="page" href='about.html' class='selected'>About</a>
-        </nav>
+        <pwa-auth  credentialmode="prompt" id="loginbutton"    microsoftkey="..."    googlekey="640376657696-6nslhet257ubc6f5eaib6l0uts0lu7bh.apps.googleusercontent.com"    facebookkey="..."    applekey="..."> 
+        </pwa-auth>
+    </nav>
 </body>
 
 <script src="js/scripts.js"></script>
