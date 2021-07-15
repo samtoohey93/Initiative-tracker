@@ -43,8 +43,13 @@
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          <input class="playerName"><label for="playerName">Player Name</label> </br>
-          
+          <div class="container">
+            <label for="playerName"> Player Name</label>
+            <input class="playerName">
+          </div>
+         </br>
+          <label for="conditions">Player Conditions List:</label>
+          <input list="conditions" name="condition" id="condition">
           <datalist id="conditions">
             <option value="Blinded">
             <option value="Charmed">
@@ -62,8 +67,7 @@
             <option value="Unconscious">
             <option value="Exhaustion">
           </datalist>
-          <label for="conditions">Player Conditions List:</label>
-         <input list="conditions" name="condition" id="condition">
+
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
