@@ -1,7 +1,7 @@
 body {
   font-family: helvetica, arial, sans-serif;
   margin: 2em;
-  padding: 50px;
+  padding: 5px;
   margin-bottom: 50px;
 }
 
@@ -16,12 +16,6 @@ nav{
 
 
 @media(max-width: 600px) {
-  nav {
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-  }
-
   .playerName{ 
     float: right;
     
@@ -44,16 +38,8 @@ nav{
     }
     
     #innerPod { 
-      border-radius: 25px;
-      border: 2px solid #73AD21;
       padding: 20px;
-      width: 200px;
-      height: 150px;
-    }
-    
-    .solid { 
-      border-top: 3px solid #bbb;
-    
+
     }
     
     #addPod { 
@@ -96,18 +82,11 @@ float: right;
 }
 
 #innerPod { 
-  border-radius: 25px;
-  border: 2px solid #73AD21;
-  padding: 20px;
-  width: 200px;
-  height: 150px;
-}
-
-.solid { 
-  border-top: 3px solid #bbb;
+  padding: 5px;
 
 }
 
+/* adding NPC Pods */
 #addPod { 
   position: relative;
   margin-left: auto;
