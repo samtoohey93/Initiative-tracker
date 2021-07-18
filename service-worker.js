@@ -4,10 +4,10 @@ self.addEventListener('install', function(e) {
 
 var cacheName = 'v1';
 var appShellFiles = [
-    './',
-    './index.html',
-    './about.html',
-    './blog.html',
+    '/',
+    'index.html',
+    'about.html',
+    'blog.html',
 ];
 
 self.addEventListener('install', function(e) {

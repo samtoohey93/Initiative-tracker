@@ -1,6 +1,6 @@
 {
-  "name": "Progressive Web App Example",
-  "short_name": "PWA Example",
+  "name": "Campaign Initiative Tracker",
+  "short_name": "CIT",
   "icons": [{
     "src": "icon-128x128.png",
       "sizes": "128x128",
