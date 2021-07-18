@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Player Info</title>
-    <link rel="manifest" href="./manifest.json">
-    <link rel='stylesheet' href='./style.css'>
-    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <meta charset="UTF-8">
+  <title>CIT</title>
+
+
+  <link rel="manifest" href="./manifest.json">
+  <link rel='stylesheet' href='./style.css'>
+  <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script>
         if('serviceWorker' in navigator) {
             navigator.serviceWorker.register('./service-worker.js');
@@ -20,63 +23,425 @@
     <meta name="msapplication-TileImage" content="icon-144x144.png">
     <meta name="msapplication-TileColor" content="#ffffff">
 </head>
+
+
 <body>
     <nav class="nav nav-pills flex-column flex-sm-row">
         <a class="btn btn-sm btn-outline-secondary" aria-current="page" href='index.html' class='selected'>Home</a>
         <a class="btn btn-sm btn-outline-secondary nav-item active" aria-current="page" href='players.html' class='selected'>Players</a>
         <a class="btn btn-sm btn-outline-secondary" aria-current="page" href='about.html' class='selected'>About</a>
-        </nav>
-<section class="container">
-   <div class="playerPod">
-  <!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-    Launch static backdrop modal
-  </button>
-  
-  <!-- Modal -->
-<section class="container" id="playerBoxes">
-  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <div class="container">
-            <label for="playerName"> Player Name</label>
-            <input class="playerName">
-          </div>
-         </br>
-          <label for="conditions">Player Conditions List:</label>
-          <input list="conditions" name="condition" id="condition">
-          <datalist id="conditions">
-            <option value="Blinded">
-            <option value="Charmed">
-            <option value="Deafened">
-            <option value="Frightened">
-            <option value="Grappled">
-            <option value="Incapacitated">
-            <option value="Invisible">
-            <option value="Paralyzed">
-            <option value="Petrified">
-            <option value="Poisoned">
-            <option value="Prone">
-            <option value="Restrained">
-            <option value="Stunned">
-            <option value="Unconscious">
-            <option value="Exhaustion">
-          </datalist>
+      </nav>
 
+<!-- Player One-->
+<section class="playerPod" id="">
+   <div class="container" id="outerPod">
+     
+    <!-- Outer Pod-->
+        <div class="card mb-3" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">Player Pod</h5>
+        
+        <!-- Inner Pod-->
+        <div class="container" id="innerPod">
+          <div class="row">
+            <div class="col">
+              <label for="conditions">Player Name</label>
+              <input type="text">
+            </div>
+            <div class="col">
+              <label for="conditions">Player Conditions List:</label>
+              <input list="conditions" name="condition" id="condition">
+              <datalist id="conditions">
+                <option value="Blinded">
+                <option value="Charmed">
+                <option value="Deafened">
+                <option value="Frightened">
+                <option value="Grappled">
+                <option value="Incapacitated">
+                <option value="Invisible">
+                <option value="Paralyzed">
+                <option value="Petrified">
+                <option value="Poisoned">
+                <option value="Prone">
+                <option value="Restrained">
+                <option value="Stunned">
+                <option value="Unconscious">
+                <option value="Exhaustion">
+              </datalist>
+            </div>
+          </div>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Understood</button>
+          <hr class="solid">
+        <!-- Second section of card-->
+        <div class="row">
+          <div class="col">
+            <label for="initiative">Player Health</label>
+            <input type="text">
+          </div>
+          <div class="col">
+            <label for="initiative">Initiative</label>
+            <input list="initiative" name="initiative" id="initiative">
+            <datalist id="initiative">
+              <option value="Blinded">
+              <option value="Charmed">
+              <option value="Deafened">
+              <option value="Frightened">
+              <option value="Grappled">
+              <option value="Incapacitated">
+              <option value="Invisible">
+              <option value="Paralyzed">
+              <option value="Petrified">
+              <option value="Poisoned">
+              <option value="Prone">
+              <option value="Restrained">
+              <option value="Stunned">
+              <option value="Unconscious">
+              <option value="Exhaustion">
+            </datalist>
+          </div>
+        </div>
+
+          <!-- Divs for top of container-->
+          </div>
         </div>
       </div>
     </div>
-  </div>
-   </div> 
+ </div> 
 </section>
+<!-- Player Two-->
+
+<section class="playerPod" id="">
+  <div class="container" id="outerPod">
+    
+   <!-- Outer Pod-->
+       <div class="card mb-3" style="max-width: 540px;">
+     <div class="row g-0">
+       <div class="col-md-8">
+         <div class="card-body">
+           <h5 class="card-title">Player Pod</h5>
+       
+       <!-- Inner Pod-->
+       <div class="container" id="innerPod">
+         <div class="row">
+           <div class="col">
+             <label for="conditions">Player Name</label>
+             <input type="text">
+           </div>
+           <div class="col">
+             <label for="conditions">Player Conditions List:</label>
+             <input list="conditions" name="condition" id="condition">
+             <datalist id="conditions">
+               <option value="Blinded">
+               <option value="Charmed">
+               <option value="Deafened">
+               <option value="Frightened">
+               <option value="Grappled">
+               <option value="Incapacitated">
+               <option value="Invisible">
+               <option value="Paralyzed">
+               <option value="Petrified">
+               <option value="Poisoned">
+               <option value="Prone">
+               <option value="Restrained">
+               <option value="Stunned">
+               <option value="Unconscious">
+               <option value="Exhaustion">
+             </datalist>
+           </div>
+         </div>
+       </div>
+         <hr class="solid">
+       <!-- Second section of card-->
+       <div class="row">
+         <div class="col">
+           <label for="initiative">Player Health</label>
+           <input type="text">
+         </div>
+         <div class="col">
+           <label for="initiative">Initiative</label>
+           <input list="initiative" name="initiative" id="initiative">
+           <datalist id="initiative">
+             <option value="Blinded">
+             <option value="Charmed">
+             <option value="Deafened">
+             <option value="Frightened">
+             <option value="Grappled">
+             <option value="Incapacitated">
+             <option value="Invisible">
+             <option value="Paralyzed">
+             <option value="Petrified">
+             <option value="Poisoned">
+             <option value="Prone">
+             <option value="Restrained">
+             <option value="Stunned">
+             <option value="Unconscious">
+             <option value="Exhaustion">
+           </datalist>
+         </div>
+       </div>
+
+         <!-- Divs for top of container-->
+         </div>
+       </div>
+     </div>
+   </div>
+</div> 
+</section>
+
+<!--Player Three-->
+
+<section class="playerPod" id="">
+  <div class="container" id="outerPod">
+    
+   <!-- Outer Pod-->
+       <div class="card mb-3" style="max-width: 540px;">
+     <div class="row g-0">
+       <div class="col-md-8">
+         <div class="card-body">
+           <h5 class="card-title">Player Pod</h5>
+       
+       <!-- Inner Pod-->
+       <div class="container" id="innerPod">
+         <div class="row">
+           <div class="col">
+             <label for="conditions">Player Name</label>
+             <input type="text">
+           </div>
+           <div class="col">
+             <label for="conditions">Player Conditions List:</label>
+             <input list="conditions" name="condition" id="condition">
+             <datalist id="conditions">
+               <option value="Blinded">
+               <option value="Charmed">
+               <option value="Deafened">
+               <option value="Frightened">
+               <option value="Grappled">
+               <option value="Incapacitated">
+               <option value="Invisible">
+               <option value="Paralyzed">
+               <option value="Petrified">
+               <option value="Poisoned">
+               <option value="Prone">
+               <option value="Restrained">
+               <option value="Stunned">
+               <option value="Unconscious">
+               <option value="Exhaustion">
+             </datalist>
+           </div>
+         </div>
+       </div>
+         <hr class="solid">
+       <!-- Second section of card-->
+       <div class="row">
+         <div class="col">
+           <label for="initiative">Player Health</label>
+           <input type="text">
+         </div>
+         <div class="col">
+           <label for="initiative">Initiative</label>
+           <input list="initiative" name="initiative" id="initiative">
+           <datalist id="initiative">
+             <option value="Blinded">
+             <option value="Charmed">
+             <option value="Deafened">
+             <option value="Frightened">
+             <option value="Grappled">
+             <option value="Incapacitated">
+             <option value="Invisible">
+             <option value="Paralyzed">
+             <option value="Petrified">
+             <option value="Poisoned">
+             <option value="Prone">
+             <option value="Restrained">
+             <option value="Stunned">
+             <option value="Unconscious">
+             <option value="Exhaustion">
+           </datalist>
+         </div>
+       </div>
+
+         <!-- Divs for top of container-->
+         </div>
+       </div>
+     </div>
+   </div>
+</div> 
+</section>
+
+<!-- Player Four-->
+
+<section class="playerPod" id="">
+  <div class="container" id="outerPod">
+    
+   <!-- Outer Pod-->
+       <div class="card mb-3" style="max-width: 540px;">
+     <div class="row g-0">
+       <div class="col-md-8">
+         <div class="card-body">
+           <h5 class="card-title">Player Pod</h5>
+       
+       <!-- Inner Pod-->
+       <div class="container" id="innerPod">
+         <div class="row">
+           <div class="col">
+             <label for="conditions">Player Name</label>
+             <input type="text">
+           </div>
+           <div class="col">
+             <label for="conditions">Player Conditions List:</label>
+             <input list="conditions" name="condition" id="condition">
+             <datalist id="conditions">
+               <option value="Blinded">
+               <option value="Charmed">
+               <option value="Deafened">
+               <option value="Frightened">
+               <option value="Grappled">
+               <option value="Incapacitated">
+               <option value="Invisible">
+               <option value="Paralyzed">
+               <option value="Petrified">
+               <option value="Poisoned">
+               <option value="Prone">
+               <option value="Restrained">
+               <option value="Stunned">
+               <option value="Unconscious">
+               <option value="Exhaustion">
+             </datalist>
+           </div>
+         </div>
+       </div>
+         <hr class="solid">
+       <!-- Second section of card-->
+       <div class="row">
+         <div class="col">
+           <label for="initiative">Player Health</label>
+           <input type="text">
+         </div>
+         <div class="col">
+           <label for="initiative">Initiative</label>
+           <input list="initiative" name="initiative" id="initiative">
+           <datalist id="initiative">
+             <option value="Blinded">
+             <option value="Charmed">
+             <option value="Deafened">
+             <option value="Frightened">
+             <option value="Grappled">
+             <option value="Incapacitated">
+             <option value="Invisible">
+             <option value="Paralyzed">
+             <option value="Petrified">
+             <option value="Poisoned">
+             <option value="Prone">
+             <option value="Restrained">
+             <option value="Stunned">
+             <option value="Unconscious">
+             <option value="Exhaustion">
+           </datalist>
+         </div>
+       </div>
+
+         <!-- Divs for top of container-->
+         </div>
+       </div>
+     </div>
+   </div>
+</div> 
+</section>
+
+
+<!-- Player Five-->
+
+<section class="playerPod" id="">
+  <div class="container" id="outerPod">
+    
+   <!-- Outer Pod-->
+       <div class="card mb-3" style="max-width: 540px;">
+     <div class="row g-0">
+       <div class="col-md-8">
+         <div class="card-body">
+           <h5 class="card-title">Player Pod</h5>
+       
+       <!-- Inner Pod-->
+       <div class="container" id="innerPod">
+         <div class="row">
+           <div class="col">
+             <label for="conditions">Player Name</label>
+             <input type="text">
+           </div>
+           <div class="col">
+             <label for="conditions">Player Conditions List:</label>
+             <input list="conditions" name="condition" id="condition">
+             <datalist id="conditions">
+               <option value="Blinded">
+               <option value="Charmed">
+               <option value="Deafened">
+               <option value="Frightened">
+               <option value="Grappled">
+               <option value="Incapacitated">
+               <option value="Invisible">
+               <option value="Paralyzed">
+               <option value="Petrified">
+               <option value="Poisoned">
+               <option value="Prone">
+               <option value="Restrained">
+               <option value="Stunned">
+               <option value="Unconscious">
+               <option value="Exhaustion">
+             </datalist>
+           </div>
+         </div>
+       </div>
+         <hr class="solid">
+       <!-- Second section of card-->
+       <div class="row">
+         <div class="col">
+           <label for="initiative">Player Health</label>
+           <input type="text">
+         </div>
+         <div class="col">
+           <label for="initiative">Initiative</label>
+           <input list="initiative" name="initiative" id="initiative">
+           <datalist id="initiative">
+             <option value="Blinded">
+             <option value="Charmed">
+             <option value="Deafened">
+             <option value="Frightened">
+             <option value="Grappled">
+             <option value="Incapacitated">
+             <option value="Invisible">
+             <option value="Paralyzed">
+             <option value="Petrified">
+             <option value="Poisoned">
+             <option value="Prone">
+             <option value="Restrained">
+             <option value="Stunned">
+             <option value="Unconscious">
+             <option value="Exhaustion">
+           </datalist>
+         </div>
+       </div>
+
+         <!-- Divs for top of container-->
+         </div>
+       </div>
+     </div>
+   </div>
+</div> 
+</section>
+
+
+
+<!-- NPC Pods-->
+
+
+
+<div class="container-fluid" id="addPod">
+  <div class="add-option">+</div>
+</div>
+
+
 </body>
+<script src="js/scripts.js"></script>
 </html>
