@@ -1,71 +1,29 @@
 body {
-  font-family: helvetica, arial, sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 2em;
   padding: 5px;
-  margin-bottom: 50px;
 }
 
-div.card.mb-3 {
-  min-width: fit-content;
-  
-}
-@media(max-width: 600px) {
-   #playerPod { 
-      display: block;
-      padding-left: auto;
-      padding-right: auto;
-      padding-bottom: 10px;
-      padding-top: 15px;
-      flex-wrap: wrap;
-      flex-direction: column;
-      justify-content: space-evenly;
-    
-    }
-    #innerPod { 
-      padding: 20px;
-
-    }
-    
-    #addPod { 
-      position: relative;
-      margin-left: auto;
-      margin-right: auto;
-    }
-    .add-option { 
-      size: 15px;
-    }
-}
 /* External CSS outside of container Desktop mode */
-@media (min-width: 601px) {
-  .container { 
-  display: block;
-  padding-top: 35px;
+
+.card {
+  width: fit-content;
+  padding-top: 15px;
+  padding-bottom: 15px;
   position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  }
-  
-  #playerPod { 
-    display: block;
-    padding-left: auto;
-    padding-right: auto;
-    padding-bottom: 10px;
-    padding-top: 15px;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: space-evenly;
+}
+
+  #playerPods { 
+    align-items: center;
+    justify-content: center;
   
   }
-  .avatar { 
-   position: relative;
-   width: 50px;
-   height: 50px;
+  #playerChild { 
+   margin: 0px;
   }
   #outerPod { 
-    padding: 5px;
-    flex: auto;
-    flex-wrap: wrap;
-    flex-direction: row;
+    padding: 20px;
+
   }
   
   /* adding NPC Pods */
@@ -77,8 +35,57 @@ div.card.mb-3 {
   .add-option { 
     size: 15px;
   }
+  #rollNumber { 
+    width: fit-content;
+  }
+  
+  #selector {
+    padding-top: 15px;
+  }
+
+/* Health Slider */
+div.aria-widget-slider {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  height: 4em;
 }
 
-#rollNumber { 
-  width: fit-content;
+div.aria-widget-slider .rail {
+  margin: 2px;
+  padding: 1px;
+  background-color: #eee;
+  border: 1px solid #888;
+  position: relative;
+  top: 2em;
+  height: 4px;
+}
+
+div.aria-widget-slider .thumb {
+  border: 1px solid #888;
+  border-top-color: #666;
+  border-left-color: #666;
+  background-color: #ddd;
+  position: relative;
+}
+
+div.aria-widget-slider .rail .thumb.focus,
+div.aria-widget-slider .rail .thumb:hover {
+  outline: 2px solid #888;
+  background-color: #def;
+}
+
+div.aria-widget-slider .rail.focus {
+  background-color: #aaa;
+}
+
+div.aria-widget-slider .value {
+  width: 2em;
+  text-align: right;
+  position: absolute;
+}
+
+label {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
 }
