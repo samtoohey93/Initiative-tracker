@@ -1,8 +1,31 @@
 body {
   font-family: 'Montserrat', sans-serif;
-  margin: 2em;
-  padding: 5px;
 }
+
+/* CSS for mobile styling */
+@media (max-width: 749px) {  
+.nav {
+
+}
+  .centerHeading{
+    text-align: center;
+    margin: auto;
+  }
+  .card{
+    width: fit-content;
+  }
+
+  .playerPods{
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-flow: column;
+  }
+
+
+
+}
+
+@media (min-width: 750px) { 
 
 /* External CSS outside of container Desktop mode */
 .centerHeading{
@@ -33,14 +56,7 @@ body {
   }
   
   /* adding NPC Pods */
-  #addPod { 
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .add-option { 
-    size: 15px;
-  }
+
   #rollNumber { 
     width: fit-content;
   }
@@ -48,6 +64,11 @@ body {
   #selector {
     padding-top: 15px;
   }
+ }
+
+
+
+
 
 /* Health Slider */
 div.aria-widget-slider {
