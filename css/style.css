@@ -5,6 +5,12 @@ body {
 }
 
 /* External CSS outside of container Desktop mode */
+.centerHeading{
+  text-align: center;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
 
 .card {
   width: fit-content;
