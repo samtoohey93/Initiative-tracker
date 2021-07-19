@@ -78,3 +78,7 @@ div.card.mb-3 {
     size: 15px;
   }
 }
+
+#rollNumber { 
+  width: fit-content;
+}
